@@ -1,10 +1,17 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int a = 234;
-        System.out.println(a);
-        int b = 7;
-        System.out.println(b);
-        int div = a / b;
-        System.out.println(div);
+        Scanner n = new Scanner (System.in);
+        System.out.println("введи число ");
+        int a = n.nextInt();
+        int hour;
+        hour = a / 3600;
+        int min;
+        min = hour%60;
+        int sec;
+        sec = min%60;
+        System.out.println(hour);
+        System.out.println(min);
+        System.out.println(sec);
     }
 }
