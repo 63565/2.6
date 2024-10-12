@@ -6,14 +6,21 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner (System.in);
-        int k =scanner.nextInt();
-        int m =scanner.nextInt();
-        double a =k / 3.6;
-        System.out.println("километр в час =" +a);
-        if (a > m) {
-            System.out.println("Километры в час больше метров в секунду: ");
+
+        System.out.println("Введите радиус круга ");
+        double radius = scanner.nextDouble();
+        double area1 = Math.PI * (radius * radius);
+        System.out.println("Площадь круга равна: " + area1);
+        System.out.println("Введите сторону квадрата");
+        double side = scanner.nextDouble();
+        double area2 = side *side ;
+        System.out.println("Площадь квадрата: "+area2);
+        if (area1 >area2 ) {
+            System.out.println("Площадь круга больше");
+        } else if (area1==area2) {
+            System.out.println("Площади равны");
         } else {
-            System.out.println("Метры в секунду больше километров в час: ");
+            System.out.println("Площадь квадрата больше");
         }
     }
 }
